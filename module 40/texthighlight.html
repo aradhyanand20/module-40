@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight text</title>
+    <style>
+        .highlight{
+           background-color: yellow; 
+        }
+    </style>
+</head>
+<body>
+    <p id="text">
+      Hello there! I am learning web development and right now I am learning javascript.
+    </p>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            let para = document.getElementById("text");
+            let texts = para.innerText.split(" ");
+            let highlightedtext = texts.map(word =>{
+                return word.length>8? `<span class="highlight">${word}</span>`:word;
+            });
+            para.innerHTML = highlightedtext.join(" ");
+
+        })
+    </script>
+</body>
+</html>

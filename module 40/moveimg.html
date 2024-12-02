@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img id="img" src="images\image_1950.jpg">
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const image = document.getElementById("img");
+            let left = 50;
+            let top = 50;
+            document.addEventListener("keydown", function(event){
+                switch(event.keyCode){
+                    case 37://left
+                        left-=10;
+                        break;
+                    case 38://up
+                        top-=10;
+                        break;    
+                    case 39://right
+                        left+=10;
+                        break;   
+                    case 40://down
+                        top+=10;
+                        break;
+                }
+                image.style.left = left + "px";
+                image.style.top = top + "px";
+            });
+        });
+    </script>
+</body>
+</html>

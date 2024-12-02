@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To change text on button click</title>
+</head>
+<body>
+    <div>
+        <h1>“The most affordable learning platform”.</h1>
+        <button>change text</button>
+        </div>
+</body>
+<script>
+    let ele = document.getElementsByTagName("h1")[0];
+    let newbutton = document.getElementsByTagName("button")[0];
+    function changeText(){
+        ele.innerText = "pw skills";
+    }
+    newbutton.addEventListener("click",changeText);
+</script>
+</html>

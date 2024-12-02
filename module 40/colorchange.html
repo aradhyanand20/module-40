@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changer</title>
+</head>
+<body>
+    <!-- Create a button that utilizes an array of colors and the Math.random method to change the background color
+of the page upon clicking -->
+    <button id="btn">
+        click here to change color
+    </button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            const colorRange = ['tomato','crimson','purple','blue'];
+            const index = Math.floor(Math.random()*colorRange.length);
+            document.body.style.backgroundColor = colorRange[index];
+        })
+
+    </script>
+</body>
+</html>
